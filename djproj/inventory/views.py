@@ -5,23 +5,23 @@ from .models import Destination
 def index(request):
 
     dest = Destination()
-    dest.name = 'Germany'
+    dest.name = 'DIARY PRODUCTS'
     dest.image = 'destination_1.jpg'
-    dest.desc = 'i am coming'
+    dest.desc = 'Your Protein Intake'
     dest.price = 700
     dest.offer = True
 
     dest1 = Destination()
-    dest1.name = 'Austria'
+    dest1.name = 'VEGGIES'
     dest1.image = 'destination_2.jpg'
-    dest1.desc = 'i am coming'
+    dest1.desc = 'Your herbal Intake'
     dest1.price = 800
     dest1.offer = False
     
     dest2 = Destination()
-    dest2.name = 'Sweden'
+    dest2.name = 'CEREALS'
     dest2.image = 'destination_3.jpg'
-    dest2.desc = 'i am coming'
+    dest2.desc = 'Your Carbs Intake'
     dest2.price = 600
     dest2.offer = False
 
