@@ -30,17 +30,20 @@
 					<div class="col">
 						<div class="header_content d-flex flex-row align-items-center justify-content-start">
 							<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
-								<div class="logo"><a href="index.html">Your Inventory</a></div>
+								<div class="logo"><a href="/">Your Inventory</a></div>
 								<nav class="main_nav">
 									<ul class="d-flex flex-row align-items-start justify-content-start">
-										<li class="active"><a href="index.html">Home</a></li>
-										<li><a href="about.html">About us</a></li>
-										<li><a href="#">Services</a></li>
+										<li class="active"><a href="/">Home</a></li>
+										{% if user.is_authenticated %}
+										<li> Hello, {{ user.first_name }}</li>
+										<li><a href="useraccts/logout">Logout</a></li>
+										{% else %}
 										<li><a href="useraccts/register">Register</a></li>
-										<li><a href="contact.html">Contact</a></li>
+										<li><a href="useraccts/login">Login</a></li>
+										{% endif %}
 									</ul>
 								</nav>
-								<div class="header_phone ml-auto">Call us: 00-44 222 333 33</div>
+								<div class="header_phone ml-auto">Call us: 00-66 222 333 55</div>
 
 								<!-- Hamburger -->
 
@@ -79,11 +82,9 @@
 			</div>
 			<div class="menu_content">
 				<ul>
-					<li><a href="inex.html">Home</a></li>
-					<li><a href="about.html">About us</a></li>
-					<li><a href="#">Services</a></li>
+					<li><a href="index.html">Home</a></li>
 					<li><a href="news.html">Register</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="contact.html">Login</a></li>
 				</ul>
 			</div>
 			<div class="menu_social">
@@ -185,7 +186,7 @@
 						<div class="home_search_container">
 							<div class="home_search_title">Search for your item</div>
 							<div class="home_search_content">
-								<form action="#" class="home_search_form" id="home_search_form">
+								<form action="search" class="home_search_form" id="home_search_form">
 									<div
 										class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
 										<input type="text" class="search_input search_input_1" placeholder="Item"
@@ -266,9 +267,9 @@
 			<div class="container">
 				<div class="row">
 					<div class="col text-center">
-						<div class="section_subtitle">simply amazing features</div>
-						<div class="section_title">
-							<h2>Popular Options</h2>
+						<div class="section_subtitle">It's Simple Now!!!</div>
+						<div class="section_title"><a href="useraccts/items">
+							<h2>Add Your Items Here</h2></a>
 						</div>
 					</div>
 				</div>
@@ -287,7 +288,7 @@
 									{% endif %}
 								</div>
 								<div class="destination_content">
-									<div class="destination_title"><a href="destinations.html">{{dest.name}}</a>
+									<div class="destination_title"><a>{{dest.name}}</a>
 									</div>
 									<div class="destination_subtitle">
 										<p>{{dest.desc}}</p>

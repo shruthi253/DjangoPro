@@ -4,7 +4,7 @@
 <html lang="en">
 
 <head>
-	<title>Registration</title>
+	<title>Login</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="Travello template project">
@@ -30,7 +30,7 @@
 					<div class="col">
 						<div class="header_content d-flex flex-row align-items-center justify-content-start">
 							<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
-								<div class="logo"><a href="index.html">Register here</a></div>
+								<div class="logo"><a href="index.html">Login here</a></div>
 								
 							</div>
 						</div>
@@ -67,7 +67,7 @@
 									<div class="col">
 										<div class="home_slider_content">
 											<div class="home_title">
-												<h2>Your Registration Details</h2>
+												<h2>Your Login Details</h2>
 											</div>
 										</div>
 									</div>
@@ -82,7 +82,7 @@
         </div>
         
 
-		<!-- Search -->
+		<!-- login -->
 
 		<div class="home_search">
 			<div class="container">
@@ -97,28 +97,17 @@
                                       width: 150px;
                                     }
                                   </style>
-								<form action="register" method ="post">
+								<form action="login" method ="post">
                                 {% csrf_token %}
 									<div
                                         class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
                                     </div>
-                                        <label for="first_name">First Name</label>
-                                        <input type="text"  name= 'first_name' required="required"><br>
                                         
-                                        <label for="last_name">Last Name</label>
-                                        <input type="text"  name= 'last_name'  required="required"><br>
-
                                         <label for="username">User Name</label>    
-                                        <input type="text"  name= 'username' required="required"><br>
-                                            
-                                        <label for="email">Email</label>
-                                        <input type="email"  name= 'email' required="required"><br>
-                                            
+                                        <input type="text"  name= 'username' required="required"><br>                                         
+                                           
                                         <label for="password1">Password</label>
-                                        <input type="password"  name= 'password1' required="required"><br>
-                                            
-                                        <label for="password2">Confirm Password</label>
-                                        <input type="password"  name= 'password2' required="required"><br>
+                                        <input type="password"  name= 'password' required="required"><br>                                           
 											
                                         <input type="Submit">
 									</div>
