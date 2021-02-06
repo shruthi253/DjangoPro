@@ -1,0 +1,4 @@
+This project is about a site where one can store their inventory lists. It is in the base stage, has to be modified accordingly.
+
+Prerequisite:
+- Django to be installed 
