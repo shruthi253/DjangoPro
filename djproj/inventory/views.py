@@ -28,3 +28,9 @@ def index(request):
     # dests = [ dest, dest1, dest2]
     
     return render(request ,'index.html',{'dests' : dests})
+
+def home(request):
+    return render(request,'index.html')
+
+def search(request):
+    return render(request,'search.html')

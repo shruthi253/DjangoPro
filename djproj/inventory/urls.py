@@ -7,5 +7,6 @@ from . import views
 ## methds used in urls are defined in views
 
 urlpatterns = [
-    path('', views.index,name='index'),
+    path('', views.index,name='index'),  
+    path('search',views.search,name='search'),  
 ]
